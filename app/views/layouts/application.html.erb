@@ -2,6 +2,8 @@
 <html lang="en-GB">
   <head>
     <title><% if Rails.env.development? -%>*<% end -%>Search MNIS</title>
+	<% if Rails.env.production? -%>
+		<base href="https://api.parliament.uk/mnis-prodder" />
     <meta charset="utf-8">
 <meta name="format-detection" content="telephone=no">
 <meta name="format-detection" content="date=no">
