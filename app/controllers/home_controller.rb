@@ -31,6 +31,9 @@ class HomeController < ApplicationController
     @include_parameters = assemble_include_parameters
     
     # We pass the API filter and include parameters we've constructed to the parse method. This method calls the public MNIS API with these parameters, parses the resulting XML and displays as HTML.
-    redirect_to( "/parse?filter=#{@filter_parameters}&include=#{@include_parameters}" )
+    #redirect_to( "/parse?filter=#{@filter_parameters}&include=#{@include_parameters}" )
+    
+    
+    redirect to( parse_url( :filter => @filter_parameters, :include => @include_parameters ) )
   end
 end
