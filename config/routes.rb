@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   
-  get 'mnis-prodder' => 'home#index', :as => 'home'
+  get '' => 'home#index', :as => 'home'
   get 'mnis-prodder/lookup' => 'home#lookup', :as => 'home_lookup'
   get 'mnis-prodder/form-parse' => 'home#form_parse', :as => 'home_parse'
   get 'mnis-prodder/parse' => 'parse#parse', :as => 'parse'
