@@ -2,7 +2,8 @@
 <html lang="en-GB">
   <head>
     <title><% if Rails.env.development? -%>*<% end -%>Search MNIS</title>
-    <meta charset="utf-8">
+	<base href="https://api.parliament.uk/mnis-prodder">
+	<meta charset="utf-8">
 <meta name="format-detection" content="telephone=no">
 <meta name="format-detection" content="date=no">
 <meta name="viewport" content="width=device-width">
@@ -15,19 +16,19 @@
 
     <p>MNIS &mdash; the Members' Names Information Service from the UK Parliament</p>
       <p>
-
-    <a href="/">Filter results</a>
-&middot;
-    <a href="/lookup">Lookup a Member</a>
-&middot;
-    <a href="https://ukparliament.github.io/ontologies/meta/relational/mnis/queries/">Useful queries</a>
+		  
+		  <%= link_to( 'Filter results', home_url )%>
+		  &middot;
+		  <%= link_to( 'Lookup a Member', home_lookup_url )%>
+		  &middot;
+    	  <a href="https://ukparliament.github.io/ontologies/meta/relational/mnis/queries/">Useful queries</a>
 
 </p>
 
     </header>
 
     <main class="py-4">
-      <%= yield %>
+      <%= yield %> 
     </main>
 
     <footer class="py-2">
