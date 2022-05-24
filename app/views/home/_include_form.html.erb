@@ -1,0 +1,82 @@
+<h2>Include additional data</h2>
+
+<p>Including additional data for Member records may return multiple nested records. A CSV of the result set may include additional columns.</p>
+
+<fieldset class="p-3 my-3 border">
+
+  <legend>Additional information</legend>
+
+ <div class="form-check">
+   <input class="form-check-input" type="checkbox" value="true" name="include_basic_details" id="include_basic_details">
+  <label class="form-check-label" for="include_basic_details">
+    Include additional information 
+  </label>
+</div>
+
+
+  <p>This includes forename, middle names, surname, town of birth and country of birth where that information is present in MNIS. For Members of the House of Lords, it also includes membership types with date ranges, and the dates of any oaths.</p>
+
+</fieldset>
+
+<fieldset class="p-3 my-3 border">
+
+  <legend>Constituencies</legend>
+
+  <div class="form-check">
+   <input class="form-check-input" type="checkbox" value="true" name="include_constituencies" id="include_constituencies">
+  <label class="form-check-label" for="include_constituencies">
+    Include constituencies
+  </label>
+</div>
+
+</fieldset>
+
+<fieldset class="p-3 my-3 border">
+
+  <legend>Parties</legend>
+
+  <div class="form-check">
+   <input class="form-check-input" type="checkbox" value="true" name="include_parties" id="include_parties">
+  <label class="form-check-label" for="include_parties">
+    Include parties
+  </label>
+</div>
+
+ 
+
+</fieldset>
+
+<fieldset class="p-3 my-3 border">
+
+  <legend>Maiden speeches</legend>
+
+
+  <div class="form-check">
+   <input class="form-check-input" type="checkbox" value="true" name="include_maiden_speeches" id="include_maiden_speeches">
+  <label class="form-check-label" for="include_maiden_speeches">
+    Include maiden speeches
+  </label>
+</div>
+
+
+
+  <p>A search including Members of the House of Lords will return two nested maiden speech records if the result set includes Members who once sat in the House of Commons.</p>
+
+  <p>A search including Members of Sinn Féin will return no nested maiden speech records because those Members choose not to sit.</p>
+
+</fieldset>
+
+<fieldset class="p-3 my-3 border">
+
+  <legend>Addresses</legend>
+
+
+  <div class="form-check">
+   <input class="form-check-input" type="checkbox" value="true" name="include_addresses" id="include_addresses">
+  <label class="form-check-label" for="include_addresses">
+    Include addresses
+  </label>
+</div>
+
+
+</fieldset>

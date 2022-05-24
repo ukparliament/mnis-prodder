@@ -1,0 +1,34 @@
+<table class="table table-sm">
+
+	<%= content_tag( 'caption', party[1] ) %>
+	<tbody>
+		<tr>
+			<%= content_tag( 'th', 'Party ID' ) %>
+			<%= content_tag( 'td', party[0] ) %>
+		</tr>
+		<tr>
+			<%= content_tag( 'th', 'Sub party' ) %>
+			<%= content_tag( 'td', party[2] ) %>
+		</tr>
+		<tr>
+			<%= content_tag( 'th', 'From' ) %>
+			<%= content_tag( 'td', party[3].strftime( '%e %B %Y') ) %>
+		</tr>
+		<tr>
+			<%= content_tag( 'th', 'To' ) %>
+			<td>
+				<% if party[4] -%>
+					<%= party[4].strftime( '%e %B %Y') %>
+				<% end -%>
+			</td>
+		</tr>
+		<tr>
+			<%= content_tag( 'th', 'Note' ) %>
+			<%= content_tag( 'td', party[5] ) %>
+		</tr>
+		<tr>
+			<%= content_tag( 'th', 'Sits opposite side to party' ) %>
+			<%= content_tag( 'td', party[6] ) %>
+		</tr>
+	</tbody>
+</table>

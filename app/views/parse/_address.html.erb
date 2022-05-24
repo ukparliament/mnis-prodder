@@ -1,0 +1,64 @@
+<h3><%= address[0] %> address</h3>
+<table class="table table-sm">
+
+  <tbody>
+    <tr>
+      <td>Email</td>
+      <td>
+        <% unless address[12].blank? -%>
+          <%= address[12] %>
+        <% end -%>
+      </td>
+    </tr>
+    <tr>
+      <td>Line 1</td>
+      <td><%= address[4] %></td>
+    </tr>
+    <tr>
+      <td>Line 2</td>
+      <td><%= address[5] %></td>
+    </tr>
+    <tr>
+      <td>Line 3</td>
+      <td><%= address[6] %></td>
+    </tr>
+    <tr>
+      <td>Line 4</td>
+      <td><%= address[7] %></td>
+    </tr>
+    <tr>
+      <td>Line 5</td>
+      <td><%= address[8] %></td>
+    </tr>
+    <tr>
+      <td>Postcode</td>
+      <td><%= address[9] %></td>
+    </tr>
+    <tr>
+      <td>Phone</td>
+      <td>
+        <% unless address[10].blank? %>
+          <%= address[10] %>
+        <% end -%>
+      </td>
+    </tr>
+    <tr>
+      <td>Fax</td>
+      <td><%= address[11] %></td>
+    </tr>
+    <tr>
+      <td>Is preferred?</td>
+      <td><%= address[1] %></td>
+    </tr>
+    <tr>
+      <td>Is physical?</td>
+      <td><%= address[2] %></td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td>Note</td>
+      <td><%= address[3] %></td>
+    </tr>
+  </tfoot>
+</table>

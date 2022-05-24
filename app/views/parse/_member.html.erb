@@ -1,0 +1,181 @@
+<article id="mnis-<%= member.mnis_id %>" class="py-3">
+
+  <h2><%= member.list_as.to_s.html_safe %></h2>
+
+<p><a href="https://members.parliament.uk/member/<%= member.mnis_id %>/contact">members.parliament.uk/member/<%= member.mnis_id %></a></p>
+
+<table class="table table-sm">
+    
+
+ <thead>
+    <tr>
+      <th scope="col" style="width:35%;"></th>
+      <th scope="col" style="width:65%;"></th>
+    </tr>
+  </thead>
+  <tbody>
+ <tr>
+        <td>Full title</td>
+        <td>
+          <%= member.full_title? %>
+        </td>
+      </tr>
+      <tr>
+        <td>Laying minister name</td>
+        <td>
+          <%= member.laying_minister_name? %>
+        </td>
+      </tr>
+      <tr>
+        <td>Gender</td>
+        <td><%= member.gender %></td>
+      </tr>
+      <tr>
+        <td>Party</td>
+        <td>
+          <%= member.party? %>
+        </td>
+      </tr>
+      <tr>
+        <td>Membership period</td>
+        <td>
+          <%= member.house_membership_period? %>
+        </td>
+      </tr>
+      <tr>
+        <td>Date of death</td>
+        <td>
+          <%= member.date_of_death? %>
+        </td>
+      </tr>
+      <tr>
+        <td>House</td>
+        <td>
+          <%= member.house? %>
+        </td>
+      </tr>
+      <tr>
+        <td>Active</td>
+        <td><%= member.membership_status_active %></td>
+      </tr>
+      <tr>
+        <td>Status</td>
+        <td>
+          <%= member.membership_status_text? %>
+        </td>
+      </tr>
+      <tr>
+        <td>Status reason</td>
+        <td>
+          <%= member.membership_status_reason? %>
+        </td>
+      </tr>
+      <tr>
+        <td>Since</td>
+        <td>
+          <%= member.membership_status_start_date? %>
+        </td>
+      </tr>
+      <tr>
+        <td>Constituency</td>
+        <td>
+          <%= member.constituency? %>
+        </td>
+      </tr>
+      <tr>
+        <td>Lords membership</td>
+        <td>
+          <%= member.lords_membership_type? %>
+        </td>
+      </tr>
+      <tr>
+        <td>MNIS ID</td>
+        <td><%= member.mnis_id %></td>
+      </tr>
+      <tr>
+        <td>DODs ID</td>
+        <td><%= member.dods_id %></td>
+      </tr>
+      <tr>
+        <td>PIMS ID</td>
+        <td><%= member.pims_id %></td>
+      </tr>
+      <tr>
+        <td>Clerks ID</td>
+        <td><%= member.clerks_id %></td>
+      </tr>
+	  <% if member.given_surname -%>
+	  	<tr>
+	        <td>Given forename</td>
+	        <td><%= member.given_forename %></td>
+	    </tr>
+	  	<tr>
+	        <td>Given middle names</td>
+	        <td><%= member.given_middle_names %></td>
+	    </tr>
+	  	<tr>
+	        <td>Given surname</td>
+	        <td><%= member.given_surname %></td>
+	    </tr>
+
+      	<% end -%>
+
+	  	<tr>
+	        <td>Town of birth</td>
+	        <td><%= member.town_of_birth %></td>
+	    </tr>
+	  	<tr>
+	        <td>Country of birth</td>
+	        <td><%= member.country_of_birth %></td>
+	    </tr>
+ <% if member.date_of_peerage_announcement -%>
+	  	<tr>
+	        <td>Date of peerage announcement</td>
+	        <td><%= member.date_of_peerage_announcement.strftime( '%e %B %Y') %></td>
+	    </tr>
+	<% end -%>
+	<% if member.date_of_writ -%>
+	  	<tr>
+	        <td>Date of writ</td>
+	        <td><%= member.date_of_writ.strftime( '%e %B %Y') %></td>
+	    </tr>
+	  <% end -%>
+	<% if member.date_of_introduction -%>
+	  	<tr>
+	        <td>Date of introduction</td>
+	        <td><%= member.date_of_introduction.strftime( '%e %B %Y') %></td>
+	    </tr>
+	  <% end -%>
+
+        <%= render :partial => 'maiden_speech', :collection => member.maiden_speeches %>
+
+  </tbody>
+</table>
+  
+
+  <% unless member.lords_membership_types.empty? -%>
+  	<%= content_tag( 'h3', 'Lords membership types' ) %>
+  	<%= render :partial => 'lords_membership_type', :collection => member.lords_membership_types %>
+  <% end -%>
+
+  <% unless member.lords_oaths.empty? -%>
+  	<%= content_tag( 'h3', 'Lords oaths' ) %>
+	<ol>
+		<%= render :partial => 'lords_oath', :collection => member.lords_oaths %>
+	</ol>
+  <% end -%>
+
+  <% unless member.constituencies.empty? -%>
+  	<%= content_tag( 'h3', 'Constituencies' ) %>
+  	<%= render :partial => 'constituency', :collection => member.constituencies %>
+  <% end -%>
+
+  <% unless member.parties.empty? -%>
+  	<%= content_tag( 'h3', 'Parties' ) %>
+  	<%= render :partial => 'party', :collection => member.parties %>
+  <% end -%>
+
+
+  <%= render :partial => 'address', :collection => member.addresses %>
+
+</article>

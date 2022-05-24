@@ -1,0 +1,71 @@
+<table class="table table-sm">
+
+	<%= content_tag( 'caption', constituency[1] ) %>
+	<tbody>
+		<tr>
+			<%= content_tag( 'th', 'Constituency ID' ) %>
+			<%= content_tag( 'td', constituency[0] ) %>
+		</tr>
+		<tr>
+			<%= content_tag( 'th', 'From' ) %>
+			<%= content_tag( 'td', constituency[2].strftime( '%e %B %Y') ) %>
+		</tr>
+		<tr>
+			<%= content_tag( 'th', 'To' ) %>
+			<td>
+				<% if constituency[3] -%>
+					<%= constituency[3].strftime( '%e %B %Y') %>
+				<% end -%>
+			</td>
+		</tr>
+		<tr>
+			<%= content_tag( 'th', 'Election ID' ) %>
+			<%= content_tag( 'td', constituency[4] ) %>
+		</tr>
+		<tr>
+			<%= content_tag( 'th', 'Election name' ) %>
+			<%= content_tag( 'td', constituency[5] ) %>
+		</tr>
+		</tr>
+		<tr>
+			<%= content_tag( 'th', 'Election date' ) %>
+			<%= content_tag( 'td', constituency[6].strftime( '%e %B %Y') ) %>
+		</tr>
+		<tr>
+			<%= content_tag( 'th', 'Election type' ) %>
+			<%= content_tag( 'td', constituency[7] ) %>
+		</tr>
+		<tr>
+			<%= content_tag( 'th', 'End reason' ) %>
+			<%= content_tag( 'td', constituency[8] ) %>
+		</tr>
+		<tr>
+			<%= content_tag( 'th', 'Entry type' ) %>
+			<%= content_tag( 'td', constituency[9] ) %>
+		</tr>
+		<tr>
+			<%= content_tag( 'th', 'Notes' ) %>
+			<%= content_tag( 'td', constituency[10] ) %>
+		</tr>
+		<tr>
+			<%= content_tag( 'th', 'Swearing in order' ) %>
+			<%= content_tag( 'td', constituency[11] ) %>
+		</tr>
+		<tr>
+			<%= content_tag( 'th', 'Sworn in title' ) %>
+			<%= content_tag( 'td', constituency[15] ) %>
+		</tr>
+		<tr>
+			<%= content_tag( 'th', 'Sworn in forename' ) %>
+			<%= content_tag( 'td', constituency[12] ) %>
+		</tr>
+		<tr>
+			<%= content_tag( 'th', 'Sworn in middle names' ) %>
+			<%= content_tag( 'td', constituency[13] ) %>
+		</tr>
+		<tr>
+			<%= content_tag( 'th', 'Sworn in surname' ) %>
+			<%= content_tag( 'td', constituency[14] ) %>
+		</tr>
+	</tbody>
+</table>
