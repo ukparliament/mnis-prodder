@@ -34,6 +34,6 @@ class HomeController < ApplicationController
     #redirect_to( "/parse?filter=#{@filter_parameters}&include=#{@include_parameters}" )
     
     
-    redirect to( parse_url( :filter => @filter_parameters, :include => @include_parameters ) )
+    redirect_to( parse_url( :filter => @filter_parameters, :include => @include_parameters ) )
   end
 end
