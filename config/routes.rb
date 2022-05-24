@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   # root "articles#index"
   
   get '' => 'home#index', :as => 'home'
-  get 'mnis-prodder/lookup' => 'home#lookup', :as => 'home_lookup'
-  get 'mnis-prodder/form-parse' => 'home#form_parse', :as => 'home_parse'
-  get 'mnis-prodder/parse' => 'parse#parse', :as => 'parse'
+  get 'lookup' => 'home#lookup', :as => 'home_lookup'
+  get 'form-parse' => 'home#form_parse', :as => 'home_parse'
+  get 'parse' => 'parse#parse', :as => 'parse'
 end
