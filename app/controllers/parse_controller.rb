@@ -1,6 +1,6 @@
 # The main XML parsing code is packaged into a separate module.
 # We require the main XML parsing code to be loaded.
-require "#{Rails.root}/app/controllers/modules/parse_xml"
+require "#{Rails.root}/lib/modules/parse_xml"
 
 # We require open-uri to get the response from the public MNIS API.
 require 'open-uri'
