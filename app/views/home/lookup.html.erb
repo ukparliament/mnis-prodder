@@ -1,5 +1,5 @@
 <h1>Lookup a Member</h1>
-<form action="form-parse" method="GET">
+<form action="<%= home_parse_url -%>" method="GET">
   <%= render :partial => 'lookup_form' %>
   <%= render :partial => 'include_form' %>
   <button type="submit" id="prod">Lookup</button>
