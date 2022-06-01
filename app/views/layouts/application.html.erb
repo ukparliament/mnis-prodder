@@ -12,29 +12,11 @@
   <body class="container">
 <div class="row p-2">
 <div class="col justify-content-md-center col-md-8">
-    <header class="py-2">
-
-    <p>MNIS &mdash; the Members' Names Information Service from the UK Parliament</p>
-      <p>
-		  
-		  <%= link_to( 'Filter results', home_url )%>
-		  &middot;
-		  <%= link_to( 'Lookup a Member', home_lookup_url )%>
-		  &middot;
-    	  <a href="https://ukparliament.github.io/ontologies/meta/relational/mnis/queries/">Useful queries</a>
-
-</p>
-
-    </header>
+    
 
     <main class="py-4">
-      <%= yield %> 
+		<%= content_tag( 'p', link_to( 'MNIS Prodder has moved home', 'https://api.parliament.uk/mnis-prodder' ) ) %>
     </main>
-
-    <footer class="py-2">
-      <p>MNIS Prodder uses the <a href='https://data.parliament.uk/membersdataplatform/memberquery.aspx'>public MNIS API</a>, made available under the <a href='https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/' rel='licence'>Open Parliament Licence</a>.</p>
-      <p>For data protection reasons, some data - including date of birth - is not published.</p>
-    </footer>
     </div>
 </div>
   </body>
