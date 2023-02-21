@@ -29,7 +29,12 @@ class ParseController < ApplicationController
     include = params[:include]
     
     # We construct the public MNIS API URI with filters and includes set.
-    @uri = URI::encode( "https://data.parliament.uk/membersdataplatform/services/mnis/members/query/#{filter}/#{include}/" )
+    
+    uri_parser = URI::Parser.new
+
+	@uri = uri_parser.escape( "https://data.parliament.uk/membersdataplatform/services/mnis/members/query/#{filter}/#{include}/" )
+	
+#     @uri = URI::encode( "https://data.parliament.uk/membersdataplatform/services/mnis/members/query/#{filter}/#{include}/" )
 
     @uri_fold = "https://data.parliament.uk/membersdataplatform/services/mnis/members/query/#{filter}/#{include}/".gsub('/', '/<wbr>')
 
