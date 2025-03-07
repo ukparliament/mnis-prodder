@@ -1,8 +1,4 @@
 # The code to assemble filter parameters, assemble include parameters and append to query parameters is packaged into separate modules.
-# We require these modules to be loaded.
-# require "#{Rails.root}/lib/modules/assemble_filter_parameters"
-# require "#{Rails.root}/lib/modules/assemble_include_parameters"
-# require "#{Rails.root}/lib/modules/append_to_query_parameters"
 
 # # Home controller.
 # Handles the form and the conversion of parameters from the form into parameters for the public [MNIS API](https://data.parliament.uk/membersdataplatform/memberquery.aspx).

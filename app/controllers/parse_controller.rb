@@ -1,5 +1,4 @@
 # The main XML parsing code is packaged into a separate module.
-# We require the main XML parsing code to be loaded.
 
 # We require open-uri to get the response from the public MNIS API.
 require 'open-uri'
@@ -31,9 +30,9 @@ class ParseController < ApplicationController
     
     uri_parser = URI::Parser.new
 
-	@uri = uri_parser.escape( "https://data.parliament.uk/membersdataplatform/services/mnis/members/query/#{filter}/#{include}/" )
+	  @uri = uri_parser.escape( "https://data.parliament.uk/membersdataplatform/services/mnis/members/query/#{filter}/#{include}/" )
 	
-#     @uri = URI::encode( "https://data.parliament.uk/membersdataplatform/services/mnis/members/query/#{filter}/#{include}/" )
+    # @uri = URI::encode( "https://data.parliament.uk/membersdataplatform/services/mnis/members/query/#{filter}/#{include}/" )
 
     @uri_fold = "https://data.parliament.uk/membersdataplatform/services/mnis/members/query/#{filter}/#{include}/".gsub('/', '/<wbr>')
 
