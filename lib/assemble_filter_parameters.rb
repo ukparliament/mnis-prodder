@@ -1,5 +1,5 @@
 # # Module to assemble filter parameters.
-module ASSEMBLE_FILTER_PARAMETERS
+module AssembleFilterParameters
   
   # ## Method to assemble the filter parameters.
   def assemble_filter_parameters

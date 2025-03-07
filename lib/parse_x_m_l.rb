@@ -1,5 +1,5 @@
 # # Module to parse the XML response from the public MNIS API.
-module PARSE_XML
+module ParseXML
   
   # ## Method to parse the XML response from the public MNIS API.
   def parse_xml( doc )

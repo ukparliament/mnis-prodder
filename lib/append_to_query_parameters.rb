@@ -1,5 +1,5 @@
 # # Module to append to query parameters.
-module APPEND_TO_QUERY_PARAMETERS
+module AppendToQueryParameters
   
   # ## Method to append additional query parameters.
   # This method takes a query parameter as constructed. This may be a set of filter parameters or a set of inclusion parameters.

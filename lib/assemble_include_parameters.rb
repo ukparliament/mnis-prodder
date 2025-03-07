@@ -1,5 +1,5 @@
 # # Module to assemble include parameters.
-module ASSEMBLE_INCLUDE_PARAMETERS
+module AssembleIncludeParameters
   
   # ## Method to assemble the include parameters.
   def assemble_include_parameters
