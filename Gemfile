@@ -7,7 +7,6 @@ ruby file: '.ruby-version'
 gem "rails", "~> 8.0.2"
 
 gem 'puma'
-
 gem 'irb'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -18,6 +17,9 @@ gem "bootsnap", require: false
 
 # Exception handling
 gem "rollbar"
+
+# Sprockets for asset handling
+gem "propshaft"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
