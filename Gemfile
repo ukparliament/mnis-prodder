@@ -18,7 +18,7 @@ gem "bootsnap", require: false
 # Exception handling
 gem "rollbar"
 
-# Sprockets for asset handling
+# Propshaft for modern asset handling
 gem "propshaft"
 
 group :development, :test do
