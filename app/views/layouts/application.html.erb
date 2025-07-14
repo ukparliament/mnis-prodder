@@ -16,6 +16,8 @@
 		<%= stylesheet_link_tag "pds-design-system" %>
 		<%= stylesheet_link_tag "library-extras-1.0.0" %>
 		<%= stylesheet_link_tag "application" %>
+		
+		<%= render :partial => 'layouts/head/json_ld/crumb', :object => @crumb %>
 	</head>
 	<body class="section-<%= @section %>">
 	  	<%= render 'layouts/header/header' %>
