@@ -1,11 +1,14 @@
 <footer>
-  <p>MNIS Prodder uses the <a href='https://data.parliament.uk/membersdataplatform/memberquery.aspx'>public MNIS API</a>, made available under the <a href='https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/' rel='licence'>Open Parliament Licence</a>.</p>
-  <p>For data protection reasons, some data - including date of birth - is not published.</p>
-	<p>
-		<a href="https://www.parliament.uk/site-information/accessibility/">Accessibility statement</a>
-		-
-		<%= link_to( 'Cookies', meta_cookies_url )  %>
-		-
-		<a href="https://commonslibrary.parliament.uk/privacy-policy/">Privacy notice</a>
-	</p>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-no-spacing primary">
+        &copy; UK Parliament <%= Date.today.year %>. Re-use our content freely and flexibly with only a few conditions under the <a href='https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/' rel='licence'>Open Parliament Licence</a>.
+      </div>
+      <div class="col-md-9 secondary">
+	  	<%= link_to( 'Cookie policy', meta_cookies_url ) %>
+	  	<%= link_to( 'Privacy notice', 'https://commonslibrary.parliament.uk/privacy-policy/' ) %>
+	  	<%= link_to( 'Accessibility statement', 'https://www.parliament.uk/site-information/accessibility/' ) %>
+      </div>
+    </div>
+  </div>
 </footer>
