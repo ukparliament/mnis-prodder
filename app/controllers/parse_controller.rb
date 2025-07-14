@@ -32,14 +32,39 @@ class ParseController < ApplicationController
 
 	  @uri = uri_parser.escape( "https://data.parliament.uk/membersdataplatform/services/mnis/members/query/#{filter}/#{include}/" )
 	
-    # @uri = URI::encode( "https://data.parliament.uk/membersdataplatform/services/mnis/members/query/#{filter}/#{include}/" )
-
-    @uri_fold = "https://data.parliament.uk/membersdataplatform/services/mnis/members/query/#{filter}/#{include}/".gsub('/', '/<wbr>')
-
     # We get the public MNIS API URI using open-uri and convert to Nokogiri XML.
     doc = Nokogiri::XML( URI.open( @uri ) )
     
     # We call the parse_xml method in the parse_xml module to parse the XML returned from the public MNIS API.
     parse_xml( doc )
+    
+    # If the filter includes a specific Member ID ...
+    if is_specific_member_filter?( filter )
+    
+      # ... we know we've looked up a single Member by an identifier.
+      @page_title = 'Member'
+      @section = 'lookup'
+    
+    # Otherwise, if the filter does not include a specific Member ID ...
+    else
+    
+      # ... we know we've looked up a list of Members.
+      @page_title = 'Members'
+      @section = 'filter'
+    end
+  end
+  
+  
+private
+  def is_specific_member_filter?( filter )
+    is_specific_member_filter = false
+    is_specific_member_filter = true if filter.include?( 'id=' )
+    is_specific_member_filter = true if filter.include?( 'refDods=' )
+    is_specific_member_filter = true if filter.include?( 'refClerks=' )
+    is_specific_member_filter = true if filter.include?( 'refPims=' )
+    is_specific_member_filter = true if filter.include?( 'refRush=' )
+    is_specific_member_filter = true if filter.include?( 'refCommonsEnq=' )
+    is_specific_member_filter = true if filter.include?( 'refCommonsHansard=' )
+    is_specific_member_filter
   end
 end
