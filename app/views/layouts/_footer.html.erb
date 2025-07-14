@@ -2,9 +2,10 @@
   <div class="container">
     <div class="row">
       <div class="col-md-3 col-no-spacing primary">
-        &copy; UK Parliament <%= Date.today.year %>. Re-use our content freely and flexibly with only a few conditions under the <a href='https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/' rel='licence'>Open Parliament Licence</a>.
+        &copy; UK Parliament <%= Date.today.year %>.
       </div>
       <div class="col-md-9 secondary">
+	  	<%= link_to( 'Open Parliament Licence', 'https://www.parliament.uk/site-information/copyright-parliament/open-parliament-licence/' ) %>
 	  	<%= link_to( 'Cookie policy', meta_cookies_url ) %>
 	  	<%= link_to( 'Privacy notice', 'https://commonslibrary.parliament.uk/privacy-policy/' ) %>
 	  	<%= link_to( 'Accessibility statement', 'https://www.parliament.uk/site-information/accessibility/' ) %>
