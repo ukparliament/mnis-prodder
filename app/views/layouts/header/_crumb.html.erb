@@ -16,7 +16,7 @@
 					<li>
 						<%= link_to( $SITE_TITLE, home_url ) %>
 					</li>
-					<%= render 'layouts/header/crumb_item', collection: @crumb %>
+					<%= render :partial => 'layouts/header/crumb_item', collection: @crumb %>
 				<% end -%>
 	        </ol>
         </nav>
