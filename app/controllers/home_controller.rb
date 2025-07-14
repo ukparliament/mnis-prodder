@@ -11,10 +11,16 @@ class HomeController < ApplicationController
   
   # ## Method to display the filter form.
   def index
+    @page_title = 'Filter results'
+    @description = 'Get a list of Members from MNIS'
+    @section = 'filter'
   end
   
   ## Method to display the lookup form.
   def lookup
+    @page_title = 'Lookup a Member'
+    @description = 'Lookup a Member from MNIS'
+    @section = 'lookup'
   end
   
   # ## Method to parse the parameters from the form and convert to parameters for the public MNIS API.
@@ -27,7 +33,6 @@ class HomeController < ApplicationController
     @include_parameters = assemble_include_parameters
     
     # We pass the API filter and include parameters we've constructed to the parse method. This method calls the public MNIS API with these parameters, parses the resulting XML and displays as HTML.
-
-	redirect_to( "/mnis-prodder/parse?filter=#{@filter_parameters}&include=#{@include_parameters}" )
+    redirect_to( "/mnis-prodder/parse?filter=#{@filter_parameters}&include=#{@include_parameters}" )
   end
 end
