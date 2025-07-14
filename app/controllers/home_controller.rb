@@ -20,6 +20,7 @@ class HomeController < ApplicationController
   def lookup
     @page_title = 'Lookup a Member'
     @description = 'Lookup a Member from MNIS'
+    @crumb << { label: 'Lookup a Member', url: nil }
     @section = 'lookup'
   end
   
