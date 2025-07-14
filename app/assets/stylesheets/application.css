@@ -1,1 +1,10 @@
 /* This is just for app specific overrides and extras */
+
+/* Main navigation active states */
+body.section-filter nav#header-nav a.nav-filter {
+	border-bottom-color: #fff;
+}
+body.section-lookup nav#header-nav a.nav-lookup {
+	border-bottom-color: #fff;
+}
+
