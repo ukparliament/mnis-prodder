@@ -1,30 +1,20 @@
 <article id="mnis-<%= member.mnis_id %>" class="py-3">
-
-  <h2><%= sanitize(member.list_as.to_s) %></h2>
-
-<p><a href="https://members.parliament.uk/member/<%= member.mnis_id %>/contact">members.parliament.uk/member/<%= member.mnis_id %></a></p>
-
-<table class="table table-sm">
-    
-
- <thead>
-    <tr>
-      <th scope="col" style="width:35%;"></th>
-      <th scope="col" style="width:65%;"></th>
-    </tr>
-  </thead>
-  <tbody>
- <tr>
-        <td>Full title</td>
-        <td>
-          <%= member.full_title? %>
-        </td>
-      </tr>
-      <tr>
-        <td>Laying minister name</td>
-        <td>
-          <%= member.laying_minister_name? %>
-        </td>
+	<h2><%= sanitize(member.list_as.to_s) %></h2>
+	<p><a href="https://members.parliament.uk/member/<%= member.mnis_id %>/contact">members.parliament.uk/member/<%= member.mnis_id %></a></p>
+	
+	<table class="table table-sm key-value">
+  		<tbody>
+			<tr>
+        	<td>Full title</td>
+        	<td>
+				<%= member.full_title? %>
+			</td>
+		</tr>
+		<tr>
+        	<td>Laying minister name</td>
+        	<td>
+          		<%= member.laying_minister_name? %>
+        	</td>
       </tr>
       <tr>
         <td>Gender</td>
