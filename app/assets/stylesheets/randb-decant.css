@@ -231,7 +231,19 @@ table.sortable.sorted-descending thead th a.sorted {
 }
 
 
+/* electionn results boundary sets */
 
+table.multibody tr:nth-child(2n) {
+  background-color: transparent;
+}
+
+table.multibody tr {
+  border-bottom: 1.5px solid #eee;
+}
+
+table.multibody tr:last-child {
+  border-color: #bbb;
+}
 
 
 
