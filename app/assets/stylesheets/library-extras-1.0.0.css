@@ -9,3 +9,29 @@ nav#header-nav a {
 nav#header-nav a:hover {
 	border-bottom-color: #fff;
 }
+
+/* Styling for key value pair tables */
+table.key-value td {
+	border: 1px solid #ddd;
+}
+table.key-value td:nth-child(1) {
+	width: 30%;
+}
+table.key-value td:nth-child(2) {
+	width: 70%;
+}
+
+/* Styling for tables */
+tbody tr:nth-child(2n) {
+	background-color: #efefef;
+}
+table.multibody tbody {
+	border-bottom: 2px solid #bbb;
+}
+table.multibody tbody:last-child {
+	border-bottom-width: 0;
+}
+
+
+
+
