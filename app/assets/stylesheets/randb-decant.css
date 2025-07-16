@@ -45,22 +45,7 @@ body.section-calendar-subscriptions nav#header-nav a.calendar-subscriptions {
 	border-bottom-color: #fff;
 }
 
-main {
-  color: #4d4d4d;
-  flex: 1 0 auto;
-  padding: 2rem 0;
-}
 
-main a {
-  color: #2b57ab;
-  text-decoration: underline;
-}
-
-main .inner-content {
-  background-color: #fff;
-  padding: 1.5rem;
-  padding-top: 2rem;
-}
 
 section {
 	margin-bottom: 1em;
@@ -72,6 +57,7 @@ div.debug {
 	padding: 10px;
 }
 
+/* egg timer */
 div.stale-warning {
   border: 3px solid red;
   margin-bottom: 20px;
@@ -196,7 +182,6 @@ a.rss {
 }
 
 table {
-  border-collapse: collapse;
   font-variant-numeric: proportional-nums;
   margin-bottom: 1em;
   width: 100%;
@@ -245,28 +230,10 @@ table.sortable.sorted-descending thead th a.sorted {
   background-image: url("/sort-down.png");
 }
 
-tbody tr:nth-child(2n) {
-  background-color: #efefef;
-}
 
-table.multibody tr:nth-child(2n) {
-  background-color: transparent;
-}
 
-table.multibody tr {
-  border-bottom: 1.5px solid #eee;
-}
 
-table.multibody tr:last-child {
-  border-color: #bbb;
-}
 
-td, th {
-  padding: 6px;
-  padding: 0.5rem;
-  text-align: left;
-  font-weight: normal;
-}
 
 thead td.number {
   text-align: right;
@@ -280,9 +247,7 @@ tbody td.number {
   padding-left:2rem;
 }
 
-tr {
-	border-bottom: thin dotted black;
-}
+
 
 th.number {
   text-align: right;
