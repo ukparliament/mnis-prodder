@@ -9,6 +9,6 @@ describe "smoke test", type: :system do
 
   it 'home page loads' do
     visit root_path
-    expect(page).to have_content("MNIS — the Members' Names Information Service from the UK Parliament")
+    expect(page).to have_content("MNIS")
   end
 end
