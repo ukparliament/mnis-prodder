@@ -6,6 +6,9 @@ ruby file: '.ruby-version'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem "rails", "~> 8.0.2"
 
+# To make CORS configuration easier and handle it in Rack middleware
+gem "rack-cors"
+
 gem 'puma'
 gem 'irb'
 
