@@ -1,3 +1,8 @@
+/* Turn off scrollbrar on crumbtrail scrolling */
+.context-nav .breadcrumb:not(.breadcrumb-adaptive) {
+  scrollbar-width: none;
+}
+
 /* Styling for nav in header */
 nav#header-nav {
 	margin-top: 1em;
