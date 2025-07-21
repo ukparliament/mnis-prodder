@@ -1,12 +1,13 @@
-<table class="table table-sm">
-	<%= content_tag( 'caption', lords_membership_type[0] ) %>
+<%= content_tag( 'h3', lords_membership_type[0] ) %>
+<table class="table table-sm key-value">
+
 	<tbody>
 		<tr>
-			<%= content_tag( 'th', 'From' ) %>
+			<%= content_tag( 'td', 'From' ) %>
 			<%= content_tag( 'td', lords_membership_type[1].strftime( '%e %B %Y') ) %>
 		</tr>
 		<tr>
-			<%= content_tag( 'th', 'To' ) %>
+			<%= content_tag( 'td', 'To' ) %>
 			<td>
 				<%= lords_membership_type[2].strftime( '%e %B %Y') if lords_membership_type[2] %>
 			</td>
