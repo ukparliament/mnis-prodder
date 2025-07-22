@@ -17,7 +17,6 @@
 	  <input type="number" name="filter_left_days" id="filter_left_days" class="p-form__input" inputmode="numeric" />
 	  <label for="filter_left_days">days</label>
 	</div>
-	
 </fieldset>
 
 <fieldset class="p-form__fieldset p-3 my-3 border rounded">
@@ -165,135 +164,77 @@
   </div>
 </fieldset>
 
-
-
-
-
-
-
-
-
-
-
-
-<fieldset class="p-3 my-3 border rounded">
-
-
-
-
-
-<div>
-  
-</div>
+<fieldset class="p-form__fieldset p-3 my-3 border rounded">
+	<legend class="p-form__fieldset-legend">Constituency in region</legend>
+	<div class="p-form__form-group">
+		<select name="filter_nuts_region" id="nuts_region" class="p-form__select">
+			<option value="all">Do not filter by constituency area</option>
+			<option value="East Midlands">East Midlands</option>
+			<option value="East of England">East of England</option>
+			<option value="London">London</option>
+			<option value="North East">North East</option>
+			<option value="North West">North West</option>
+			<option value="Northern Ireland">Northern Ireland</option>
+			<option value="Scotland">Scotland</option>
+			<option value="South East">South East</option>
+			<option value="South West">South West</option>
+			<option value="Wales">Wales</option>
+			<option value="West Midlands">West Midlands</option>
+			<option value="Yorkshire and The Humber">Yorkshire and The Humber</option>
+		</select>
+	</div>
 </fieldset>
 
-
-
-
-
-
-
-
-
-<fieldset class="p-3 my-3 border rounded">
-
-  <legend>Constituency in NUTS region</legend>
-
-  <select id="nuts_region" name="filter_nuts_region" class="form-select">
-    <option value="all">Do not filter by constituency area</option>
-    <option value="East Midlands">East Midlands</option>
-    <option value="East of England">East of England</option>
-    <option value="London">London</option>
-    <option value="North East">North East</option>
-    <option value="North West">North West</option>
-    <option value="Northern Ireland">Northern Ireland</option>
-    <option value="Scotland">Scotland</option>
-    <option value="South East">South East</option>
-    <option value="South West">South West</option>
-    <option value="Wales">Wales</option>
-    <option value="West Midlands">West Midlands</option>
-    <option value="Yorkshire and The Humber">Yorkshire and The Humber</option>
-  </select>
-
+<fieldset class="p-form__fieldset p-3 my-3 border rounded">
+  <legend class="p-form__fieldset-legend">Government positions</legend>
+  <div class="p-form__radio-group">
+    <div class="p-form__radio-item">
+      <input type="radio" name="filter_government_position_held" id="government-position-either" value="0" checked />
+      <label for="government-position-either" class="p-form__radio-item-label">Members who hold a government position and Members who do not hold a government position</label>
+    </div>
+    <div class="p-form__radio-item">
+      <input type="radio" name="filter_government_position_held" id="government_position_held" value="1" />
+      <label for="government_position_held" class="p-form__radio-item-label">Members who hold a government position</label>
+    </div>
+    <div class="p-form__radio-item">
+      <input type="radio" name="filter_government_position_held" id="government_position_not_held" value="2" />
+      <label for="government_position_not_held" class="p-form__radio-item-label">Members who do not hold a government position</label>
+    </div>
+  </div>
 </fieldset>
 
-<fieldset class="p-3 my-3 border rounded">
-
-  <legend>Government positions</legend>
-
-  <div class="form-check">
-  <input class="form-check-input" type="radio" name="filter_government_position_held" id="government-position-either" value="0" checked>
-  <label class="form-check-label" for="government-position-either">
-   Members who hold a government position and Members who do not hold a government position
-  </label>
-</div>
-
-<div class="form-check">
-  <input class="form-check-input" type="radio" name="filter_government_position_held" id="government_position_held" value="1">
-  <label class="form-check-label" for="government_position_held">
-   Members who hold a government position
-  </label>
-</div>
-
-<div class="form-check">
-  <input class="form-check-input" type="radio" name="filter_government_position_held" id="government_position_not_held" value="2">
-  <label class="form-check-label" for="government_position_not_held">
-   Members who do not hold a government position
-  </label>
-</div>
-
+<fieldset class="p-form__fieldset p-3 my-3 border rounded">
+  <legend class="p-form__fieldset-legend">Opposition positions</legend>
+  <div class="p-form__radio-group">
+    <div class="p-form__radio-item">
+      <input type="radio" name="filter_opposition_position_held" id="opposition-position-either" value="0" checked />
+      <label for="opposition-position-either" class="p-form__radio-item-label">Members who hold an opposition position and Members who do not hold an opposition position</label>
+    </div>
+    <div class="p-form__radio-item">
+      <input type="radio" name="filter_opposition_position_held" id="opposition_position_held" value="1" />
+      <label for="opposition_position_held" class="p-form__radio-item-label">Members who hold an opposition position</label>
+    </div>
+    <div class="p-form__radio-item">
+      <input type="radio" name="filter_opposition_position_held" id="opposition_position_not_held" value="2" />
+      <label for="opposition_position_not_held" class="p-form__radio-item-label">Members who do not hold an opposition position</label>
+    </div>
+  </div>
 </fieldset>
 
-<fieldset class="p-3 my-3 border">
-
-  <legend>Opposition positions</legend>
-
-  <div class="form-check">
-  <input class="form-check-input" type="radio" name="filter_opposition_position_held" id="opposition-position-either" value="0" checked>
-  <label class="form-check-label" for="opposition-position-either">
-   Members who hold an opposition position and Members who do not hold an opposition position
-  </label>
-</div>
-
-<div class="form-check">
-  <input class="form-check-input" type="radio" name="filter_opposition_position_held" id="opposition_position_held" value="1">
-  <label class="form-check-label" for="opposition_position_held">
-   Members who hold an opposition position
-  </label>
-</div>
-
-<div class="form-check">
-  <input class="form-check-input" type="radio" name="filter_opposition_position_held" id="opposition_position_not_held" value="2">
-  <label class="form-check-label" for="opposition_position_not_held">
-   Members who do not hold an opposition position
-  </label>
-</div>
-
-  </label>
-
-</fieldset>
-
-<fieldset class="p-3 my-3 border rounded">
-
-  <legend>Parliamentary positions</legend>
-
-  <div class="form-check">
-  <input class="form-check-input" type="radio" name="filter_parliamentary_position_held" id="parliamentary-position-either" value="0" checked>
-  <label class="form-check-label" for="parliamentary-position-either">
-Members who hold a parliamentary position and Members who do not hold a parliamentary position  </label>
-</div>
-
- <div class="form-check">
-  <input class="form-check-input" type="radio" name="filter_parliamentary_position_held" id="parliamentary_position_held" value="1">
-  <label class="form-check-label" for="parliamentary_position_held">
-Members who hold a parliamentary position</label>
-</div>
-
- <div class="form-check">
-  <input class="form-check-input" type="radio" name="filter_parliamentary_position_held" id="parliamentary_position_not_held" value="2">
-  <label class="form-check-label" for="parliamentary_position_not_held">
-Members who do not hold a parliamentary position</label>
-</div>
-
-
+<fieldset class="p-form__fieldset p-3 my-3 border rounded">
+  <legend class="p-form__fieldset-legend">Parliamentary positions</legend>
+  <div class="p-form__radio-group">
+    <div class="p-form__radio-item">
+      <input type="radio" name="filter_parliamentary_position_held" id="parliamentary-position-either" value="0" checked />
+      <label for="parliamentary-position-either" class="p-form__radio-item-label">Members who hold a parliamentary position and Members who do not hold a parliamentary position</label>
+    </div>
+    <div class="p-form__radio-item">
+      <input type="radio" name="filter_parliamentary_position_held" id="parliamentary_position_held" value="1" />
+      <label for="parliamentary_position_held" class="p-form__radio-item-label">Members who hold a parliamentary position</label>
+    </div>
+    <div class="p-form__radio-item">
+      <input type="radio" name="filter_parliamentary_position_held" id="parliamentary_position_not_held" value="2" />
+      <label for="parliamentary_position_not_held" class="p-form__radio-item-label">Members who do not hold a parliamentary position</label>
+    </div>
+  </div>
 </fieldset>

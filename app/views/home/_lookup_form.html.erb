@@ -1,18 +1,40 @@
-<fieldset>
-  <label for="identifier">Identifier</label>
-  <input type="number" id="identifier" name="identifier" /><br>
-  <h3>Source</h3>
-  <input type="radio" id="identifier_source_mnis" name="identifier_source" value="id" checked /><label for="identifier_source_mnis">MNIS</label>
-  <br>
-  <input type="radio" id="identifier_source_dods" name="identifier_source" value="refDods" /><label for="identifier_source_dods">Dods</label>
-  <br>
-  <input type="radio" id="identifier_source_clerks" name="identifier_source" value="refClerks" /><label for="identifier_source_clerks">Clerks</label>
-  <br>
-  <input type="radio" id="identifier_source_pims" name="identifier_source" value="refPims" /><label for="identifier_source_pims">PIMS</label>
-  <br>
-  <input type="radio" id="identifier_source_rush" name="identifier_source" value="refRush" /><label for="identifier_source_rush">Rush</label>
-  <br>
-  <input type="radio" id="identifier_source_commons_enquiries" name="identifier_source" value="refCommonsEnq" /><label for="identifier_source_commons_enquiries">Commons enquiries</label>
-  <br>
-  <input type="radio" id="identifier_source_commons_hansard" name="identifier_source" value="refCommonsHansard" /><label for="identifier_source_commons_hansard">Commons Hansard</label>
+<fieldset class="p-form__fieldset p-3 my-3 border rounded">
+  	<legend class="p-form__fieldset-legend">Identifier</legend>
+	<div class="p-form__form-group">
+	  <input type="number" name="identifier" id="identifier" class="p-form__input" inputmode="numeric" />
+	</div>
+</fieldset>
+
+<fieldset class="p-form__fieldset p-3 my-3 border rounded">
+  <legend class="p-form__fieldset-legend">Source</legend>
+  <div class="p-form__radio-group">
+    <div class="p-form__radio-item">
+      <input type="radio" name="identifier_source" id="identifier_source_mnis" value="id" checked />
+      <label for="identifier_source_mnis" class="p-form__radio-item-label">MNIS</label>
+    </div>
+    <div class="p-form__radio-item">
+      <input type="radio" name="identifier_source" id="identifier_source_dods" value="refDods" />
+      <label for="identifier_source_dods" class="p-form__radio-item-label">Dods</label>
+    </div>
+    <div class="p-form__radio-item">
+      <input type="radio" name="identifier_source" id="identifier_source_clerks" value="refClerks" />
+      <label for="identifier_source_clerks" class="p-form__radio-item-label">Clerks</label>
+    </div>
+    <div class="p-form__radio-item">
+      <input type="radio" name="identifier_source" id="identifier_source_pims" value="refPims" />
+      <label for="identifier_source_pims" class="p-form__radio-item-label">PIMS</label>
+    </div>
+    <div class="p-form__radio-item">
+      <input type="radio" name="identifier_source" id="identifier_source_rush" value="refRush" />
+      <label for="identifier_source_rush" class="p-form__radio-item-label">Rush</label>
+    </div>
+    <div class="p-form__radio-item">
+      <input type="radio" name="identifier_source" id="identifier_source_commons_enquiries" value="refCommonsEnq" />
+      <label for="identifier_source_commons_enquiries" class="p-form__radio-item-label">Commons enquiries</label>
+    </div>
+    <div class="p-form__radio-item">
+      <input type="radio" name="identifier_source" id="identifier_source_commons_hansard" value="refCommonsHansard" />
+      <label for="identifier_source_commons_hansard" class="p-form__radio-item-label">Commons Hansard</label>
+    </div>
+  </div>
 </fieldset>
