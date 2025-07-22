@@ -12,8 +12,12 @@
 <fieldset class="p-form__fieldset p-3 my-3 border rounded">
   	<legend class="p-form__fieldset-legend">Left in the last X days</legend>
 	<span class="p-form__hint">Selecting this option only returns results when the 'Current Members' checkbox is unticked. It is not possible to filter by Members having left a given House.</span>
-	<input type="number" id="filter_left_days" name="filter_left_days">
-	<label for="filter_left_days">days</label>
+	<div class="p-form__form-group">
+	  <label class="p-form__label" for="filter_left_days">Enter a number</label>
+	  <input type="number" name="filter_left_days" id="filter_left_days" class="p-form__input" inputmode="numeric" />
+	  <label for="filter_left_days">days</label>
+	</div>
+	
 </fieldset>
 
 <fieldset class="p-form__fieldset p-3 my-3 border rounded">
