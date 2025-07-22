@@ -1,202 +1,195 @@
-<fieldset class="p-3 my-3 border rounded">
-  <legend>Current Members</legend> 
-<div class="form-check">
-   <input class="form-check-input" type="checkbox" value="true" name="filter_current_members" id="filter_current_members" checked>
-  <label class="form-check-label" for="filter_current_members">
-    Current Members
-  </label>
-</div>
-</fieldset>
-<fieldset class="p-3 my-3 border rounded">
-  <legend>Left in the last X days</legend>
-  <input type="number" id="filter_left_days" name="filter_left_days">
-  <label for="filter_left_days">
-	  days
-  </label>
-  <p>Selecting this option only returns results when the 'Current Members' checkbox is unticked. It is not possible to filter by Members having left a given House.</p>
-</fieldset>
-<fieldset class="p-3 my-3 border rounded">
-  <legend>Gender</legend>
-
-  <div class="form-check">
-  <input class="form-check-input" type="radio" name="filter_gender" id="gender-all" value="0" checked>
-  <label class="form-check-label" for="gender-all">
-    All
-  </label>
-</div>
-
-  <div class="form-check">
-  <input class="form-check-input" type="radio" name="filter_gender" id="female" value="1">
-  <label class="form-check-label" for="female">
-    Female
-  </label>
-</div>
-
- <div class="form-check">
-  <input class="form-check-input" type="radio" name="filter_gender" id="male" value="1">
-  <label class="form-check-label" for="male">
-    Male
-  </label>
-</div>
-
+<fieldset class="p-form__fieldset p-3 my-3 border rounded">
+  	<legend class="p-form__fieldset-legend">Current Members</legend>
+	<span class="p-form__hint">Uncheck to include ex-Members</span>
+	<div class="p-form__checkbox-group pt-3">
+		<div class="p-form__checkbox-item">
+			<input type="checkbox" name="filter_current_members" id="filter_current_members" value="true" checked />
+			<label for="filter_current_members" class="p-form__checkbox-item-label">Current Members</label>
+		</div>
+	</div>
 </fieldset>
 
-<fieldset class="p-3 my-3 border rounded">
-
-  <legend>House</legend>
-
-  <div class="form-check">
-  <input class="form-check-input" type="radio" name="filter_house" id="house-both" value="0" checked>
-  <label class="form-check-label" for="house-both">
-    House of Commons and House of Lords
-  </label>
-</div>
-
-<div class="form-check">
-  <input class="form-check-input" type="radio" name="filter_house" id="house-commons" value="1">
-  <label class="form-check-label" for="house-commons">
-    House of Commons
-  </label>
-</div>
-
-<div class="form-check">
-  <input class="form-check-input" type="radio" name="filter_house" id="house-lords" value="2">
-  <label class="form-check-label" for="house-lords">
-    House of Lords
-  </label>
-</div>
-
-<div class="form-check">
-   <input class="form-check-input" type="checkbox" value="true" name="filter_previous_house_members" id="previous_house_members">
-  <label class="form-check-label" for="previous_house_members">
-    Include Members who were in this House but no longer are
-  </label>
-</div>
-
-
+<fieldset class="p-form__fieldset p-3 my-3 border rounded">
+  	<legend class="p-form__fieldset-legend">Left in the last X days</legend>
+	<span class="p-form__hint">Selecting this option only returns results when the 'Current Members' checkbox is unticked. It is not possible to filter by Members having left a given House.</span>
+	<input type="number" id="filter_left_days" name="filter_left_days">
+	<label for="filter_left_days">days</label>
 </fieldset>
 
-<fieldset class="p-3 my-3 border rounded">
-
-  <legend>Eligible to sit</legend>
-
-  <div class="form-check">
-  <input class="form-check-input" type="radio" name="filter_eligible" id="eligible-either" value="0" checked>
-  <label class="form-check-label" for="eligible-either">
-    Eligible and ineligible Members
-  </label>
-</div>
-
-<div class="form-check">
-  <input class="form-check-input" type="radio" name="filter_eligible" id="eligible" value="1">
-  <label class="form-check-label" for="eligible">
-    Members who are eligible to sit
-  </label>
-</div>
-
-<div class="form-check">
-  <input class="form-check-input" type="radio" name="filter_eligible" id="not_eligible" value="2">
-  <label class="form-check-label" for="not_eligible">
-    Members who are not eligible to sit
-  </label>
-</div>
-
-
-
-</fieldset>
-
-<fieldset class="p-3 my-3 border rounded">
-
-  <legend>Parties and groupings</legend>
-
-  <select class="form-select" id="party_id" name="filter_party_id">
-  <option value="all" selected>All parties and groupings</option>
-    <option value="1">Alliance</option>
-    <option value="2">Anti H Block</option>
-    <option value="3">Bishops</option>
-    <option value="4">Conservative</option>
-    <option value="5">Conservative Independent</option>
-    <option value="6">Crossbench</option>
-    <option value="7">Democratic Unionist Party</option>
-    <option value="44">Green Party</option>
-    <option value="8">Independent</option>
-    <option value="9">Independent Conservative</option>
-    <option value="10">Independent Labour</option>
-    <option value="12">Independent SDP</option>
-    <option value="53">Independent Social Democrat</option>
-    <option value="13">Independent Socialist</option>
-    <option value="52">Independent Ulster Unionist</option>
-    <option value="15">Labour</option>
-    <option value="43">Labour Independent</option>
-    <option value="16">Liberal</option>
-    <option value="17">Liberal Democrat</option>
-    <option value="283">Lord Speaker</option>
-    <option value="19">National Liberal & Conservative</option>
-    <option value="49">Non-affiliated</option>
-    <option value="20">Opposition Unity</option>
-    <option value="21">Other</option>
-    <option value="22">Plaid Cymru</option>
-    <option value="24">Referendum</option>
-    <option value="26">Respect</option>
-    <option value="29">Scottish National Party</option>
-    <option value="30">Sinn Féin</option>
-    <option value="31">Social Democratic & Labour Party</option>
-    <option value="32">Social Democratic Party</option>
-    <option value="47">Speaker</option>
-    <option value="1004">The Independent Group for Change</option>
-    <option value="35">UK Independence Party</option>
-    <option value="36">Ulster Popular Unionist Party</option>
-    <option value="38">Ulster Unionist Party</option>
-    <option value="39">United Kingdom Unionist</option>
-    <option value="41">United Ulster Unionist Party</option>
-</select>
-
- <div class="form-check">
-   <input class="form-check-input" type="checkbox" value="true" name="filter_previous_party_affiliation" id="previous_party_affiliation">
-  <label class="form-check-label" for="previous_party_affiliation">
-    Include Members who were previously affiliated to this party or grouping 
-  </label>
-</div>
-
-
-</fieldset>
-
-<fieldset class="p-3 my-3 border rounded">
-
-  <legend>Returned at election</legend>
-
-  <div class="form-check">
-  <input class="form-check-input" type="radio" name="filter_election_type" id="ignore_election" value="0" checked>
-  <label class="form-check-label" for="ignore_election">
-    Do not filter by election
-  </label>
-</div>
-
- <div class="form-check">
-  <input class="form-check-input" type="radio" name="filter_election_type" id="general_election" value="1">
-  <label class="form-check-label" for="general_election">
-   Members of the House of Commons returned at a general election
-  </label>
-</div>
-
-
-<div class="mb-3">
-    <label for="general_election_year" class="form-label" name="filter_general_election_year">Year of general election</label>
-    <input type="text" class="form-control" id="general_election_year" placeholder="2019">
+<fieldset class="p-form__fieldset p-3 my-3 border rounded">
+  <legend class="p-form__fieldset-legend">Gender</legend>
+  <div class="p-form__radio-group">
+    <div class="p-form__radio-item">
+      <input type="radio" name="filter_gender" id="gender-all" value="0" checked />
+      <label for="gender-all" class="p-form__radio-item-label">All</label>
+    </div>
+    <div class="p-form__radio-item">
+      <input type="radio" name="filter_gender" id="female" value="1" />
+      <label for="female" class="p-form__radio-item-label">Female</label>
+    </div>
+    <div class="p-form__radio-item">
+      <input type="radio" name="filter_gender" id="male" value="2" />
+      <label for="male" class="p-form__radio-item-label">Male</label>
+    </div>
   </div>
+</fieldset>
 
-<div class="form-check">
-  <input class="form-check-input" type="radio" name="filter_election_type" id="by_election" value="2">
-  <label class="form-check-label" for="by_election">
-   Members of the House of Commons returned at a by-election
-  </label>
-</div>
+<fieldset class="p-form__fieldset p-3 my-3 border rounded">
+	<legend class="p-form__fieldset-legend">House</legend>
+	<div class="p-form__radio-group">
+		<div class="p-form__radio-item">
+			<input type="radio" name="filter_house" id="house-both" value="0" checked />
+			<label for="house-both" class="p-form__radio-item-label">House of Commons and House of Lords</label>
+		</div>
+		<div class="p-form__radio-item">
+			<input type="radio" name="filter_house" id="house-commons" value="1" />
+			<label for="house-commons" class="p-form__radio-item-label">House of Commons</label>
+		</div>
+		<div class="p-form__radio-item">
+			<input type="radio" name="filter_house" id="house-lords" value="2" />
+			<label for="house-lords" class="p-form__radio-item-label">House of Lords</label>
+		</div>
+	</div>
+	
+	<div class="p-form__checkbox-group pt-3">
+		<div class="p-form__checkbox-item">
+			<input type="checkbox" name="filter_previous_house_members" id="previous_house_members" value="true" />
+			<label for="previous_house_members" class="p-form__checkbox-item-label">Include Members who were in this House but no longer are</label>
+		</div>
+	</div>
+</fieldset>
+
+<fieldset class="p-form__fieldset p-3 my-3 border rounded">
+  <legend class="p-form__fieldset-legend">Eligible to sit</legend>
+  <div class="p-form__radio-group">
+    <div class="p-form__radio-item">
+      <input type="radio" name="filter_eligible" id="eligible-either" value="0" checked />
+      <label for="eligible-either" class="p-form__radio-item-label">Eligible and ineligible Members</label>
+    </div>
+    <div class="p-form__radio-item">
+      <input type="radio" name="filter_eligible" id="eligible" value="1" />
+      <label for="eligible" class="p-form__radio-item-label">Members who are eligible to sit</label>
+    </div>
+    <div class="p-form__radio-item">
+      <input type="radio" name="filter_eligible" id="not_eligible" value="2" />
+      <label for="not_eligible" class="p-form__radio-item-label">Members who are not eligible to sit</label>
+    </div>
+  </div>
+</fieldset>
+
+<fieldset class="p-form__fieldset p-3 my-3 border rounded">
+	<legend class="p-form__fieldset-legend">Parties and groupings</legend>
+	<div class="p-form__form-group">
+		<select name="filter_party_id" id="party_id" class="p-form__select">
+  	  		<option value="all" selected>All parties and groupings</option>
+		    <option value="1">Alliance</option>
+		    <option value="2">Anti H Block</option>
+		    <option value="3">Bishops</option>
+		    <option value="4">Conservative</option>
+		    <option value="5">Conservative Independent</option>
+		    <option value="6">Crossbench</option>
+		    <option value="7">Democratic Unionist Party</option>
+		    <option value="44">Green Party</option>
+		    <option value="8">Independent</option>
+		    <option value="9">Independent Conservative</option>
+		    <option value="10">Independent Labour</option>
+		    <option value="12">Independent SDP</option>
+		    <option value="53">Independent Social Democrat</option>
+		    <option value="13">Independent Socialist</option>
+		    <option value="52">Independent Ulster Unionist</option>
+		    <option value="15">Labour</option>
+		    <option value="43">Labour Independent</option>
+		    <option value="16">Liberal</option>
+		    <option value="17">Liberal Democrat</option>
+		    <option value="283">Lord Speaker</option>
+		    <option value="19">National Liberal & Conservative</option>
+		    <option value="49">Non-affiliated</option>
+		    <option value="20">Opposition Unity</option>
+		    <option value="21">Other</option>
+		    <option value="22">Plaid Cymru</option>
+		    <option value="24">Referendum</option>
+		    <option value="1036">Reform</option>
+			<option value="26">Respect</option>
+		    <option value="29">Scottish National Party</option>
+		    <option value="30">Sinn Féin</option>
+		    <option value="31">Social Democratic & Labour Party</option>
+		    <option value="32">Social Democratic Party</option>
+		    <option value="47">Speaker</option>
+		    <option value="1004">The Independent Group for Change</option>
+		    <option value="35">UK Independence Party</option>
+		    <option value="36">Ulster Popular Unionist Party</option>
+		    <option value="38">Ulster Unionist Party</option>
+		    <option value="39">United Kingdom Unionist</option>
+		    <option value="41">United Ulster Unionist Party</option>
+		</select>
+	</div>
+	
+	<div class="p-form__checkbox-group pt-3">
+		<div class="p-form__checkbox-item">
+			<input type="checkbox" name="filter_previous_party_affiliation" id="previous_party_affiliation" value="true" />
+			<label for="previous_party_affiliation" class="p-form__checkbox-item-label">Include Members who were previously affiliated to this party or grouping</label>
+		</div>
+	</div>
+</fieldset>
+
+<fieldset class="p-form__fieldset p-3 my-3 border rounded">
+  <legend class="p-form__fieldset-legend">Returned at election</legend>
+  <div class="p-form__radio-group">
+    <div class="p-form__radio-item">
+      <input type="radio" name="filter_election_type" id="ignore_election" value="0" checked />
+      <label for="ignore_election" class="p-form__radio-item-label">Do not filter on elections</label>
+    </div>
+    <div class="p-form__radio-item">
+      <input type="radio" name="filter_election_type" id="general_election" value="1" />
+      <label for="general_election" class="p-form__radio-item-label">Members of the House of Commons returned at a general election</label>
+    </div>
+	<div class="p-form__form-group pt-3 pb-3">
+		<select name="filter_general_election_year" id="general_election_year" class="p-form__select">
+		    <option value="2024">2024</option>
+		    <option value="2019">2019</option>
+		    <option value="2017">2017</option>
+		    <option value="2015">2015</option>
+  	  		<option value="2010">2010</option>
+		</select>
+	</div>
+	<div class="p-form__radio-item">
+      <input type="radio" name="filter_election_type" id="by_election" value="2" />
+      <label for="by_election" class="p-form__radio-item-label">Members of the House of Commons returned at a by-election</label>
+    </div>
+    <label class="form-label" for="by_election_date">Date of by-election</label>
+    <input class="form-control" type="date" id="by_election_date" name="filter_by_election_date" />
+  </div>
+</fieldset>
+
+
+
+
+
+
+
+
+
+
+
+
+<fieldset class="p-3 my-3 border rounded">
+
+
+
+
 
 <div>
-  <label class="form-label" for="by_election_date">Date of by-election</label>
-  <input class="form-control" type="date" id="by_election_date" name="filter_by_election_date" />
+  
 </div>
 </fieldset>
+
+
+
+
+
+
+
+
 
 <fieldset class="p-3 my-3 border rounded">
 
