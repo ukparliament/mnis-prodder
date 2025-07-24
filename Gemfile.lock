@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/ukparliament/design-assets.git
+  revision: 94721c2666491f51be74089f5069754e79c29d87
+  glob: library_design/*.gemspec
+  specs:
+    library_design (0.1.1)
+      rack-cors (~> 3.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -274,6 +282,7 @@ DEPENDENCIES
   capybara
   debug
   irb
+  library_design!
   propshaft
   puma
   rack-cors
