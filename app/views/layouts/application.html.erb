@@ -11,10 +11,7 @@
 		<meta name="format-detection" content="date=no">
 		<meta name="viewport" content="width=device-width">
 		
-		<%= stylesheet_link_tag "bootstrap-4.5.3" %>
-		<%= stylesheet_link_tag "fontawesome-5.13.0" %>
-		<%= stylesheet_link_tag "pds-design-system" %>
-		<%= stylesheet_link_tag "library-extras-1.0.0" %>
+		<%= render 'library_design/library_design_stylesheets' %>
 		<%= stylesheet_link_tag "application" %>
 		
 		<%= render :partial => 'layouts/head/json_ld/crumb', :object => @crumb %>
