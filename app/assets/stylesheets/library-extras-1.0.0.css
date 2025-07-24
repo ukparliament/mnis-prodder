@@ -27,9 +27,6 @@ table.key-value td:nth-child(2) {
 }
 
 /* Styling for tables */
-tbody tr:nth-child(2n) {
-	background-color: #efefef;
-}
 table.multibody tbody {
 	border-bottom: 2px solid #bbb;
 }
