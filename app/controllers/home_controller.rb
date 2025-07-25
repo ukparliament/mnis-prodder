@@ -33,11 +33,10 @@ class HomeController < ApplicationController
     # We assemble the include parameters.
     @include_parameters = assemble_include_parameters
 
-    pp '*' * 80
-    pp parse_url
-    pp "#{parse_url}?filter=#{@filter_parameters}&include=#{@include_parameters}"
-    pp request.headers
-    pp '*' * 80
+    logger.info "Host: #{request.headers['Host']}"
+    logger.info "X-Forwarded-Host: #{request.headers['X-Forwarded-Host']}"
+    logger.info "X-Forwarded-Proto: #{request.headers['X-Forwarded-Proto']}"
+
     
     # We pass the API filter and include parameters we've constructed to the parse method. This method calls the public MNIS API with these parameters, parses the resulting XML and displays as HTML.
     redirect_to( "#{parse_url}?filter=#{@filter_parameters}&include=#{@include_parameters}" )
