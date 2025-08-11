@@ -28,7 +28,6 @@ gem "propshaft"
 # gem "library_design", path: '~/Projects/design-assets/library_design'
 gem "library_design", github: "ukparliament/design-assets", glob: 'library_design/*.gemspec', tag: "0.2.3"
 
-
 # Lograge
 gem "lograge"
 
