@@ -1,20 +1,8 @@
 <!DOCTYPE html>
 <html lang="en-GB">
 	<head>
-		<%= content_tag( 'title', @page_title || $SITE_TITLE ) %>
-		<meta name="description" content="<%= @description %>">
-		<% if Rails.env.production? -%>
-			<base href="https://api.parliament.uk/mnis-prodder">
-		<% end %>
-		<meta charset="utf-8">
-		<meta name="format-detection" content="telephone=no">
-		<meta name="format-detection" content="date=no">
-		<meta name="viewport" content="width=device-width">
-		
-		<%= render 'library_design/library_design_stylesheets' %>
-		<%= stylesheet_link_tag "application" %>
-		
-		<%= render :partial => 'library_design/head/json_ld/crumb', :object => @crumb %>
+		<%= render :partial => 'library_design/head/head' %>
+		<%= tag( 'base', :href => 'https://api.parliament.uk/mnis-prodder' )if Rails.env.production? %>
 	</head>
 	<body class="section-<%= @section %> brand-bicameral">
 	  	<%= render 'layouts/header/header' %>
