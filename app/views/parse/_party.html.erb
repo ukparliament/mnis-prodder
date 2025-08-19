@@ -1,13 +1,13 @@
-<%= content_tag( 'h3', party[1] ) %>
+<%= content_tag( 'h4', party[1].text ) %>
 <table class="table table-striped table-sm key-value">
 	<tbody>
 		<tr>
 			<%= content_tag( 'td', 'Party ID' ) %>
-			<%= content_tag( 'td', party[0] ) %>
+			<%= content_tag( 'td', party[0].text ) %>
 		</tr>
 		<tr>
 			<%= content_tag( 'td', 'Sub party' ) %>
-			<%= content_tag( 'td', party[2] ) %>
+			<%= content_tag( 'td', party[2].text ) %>
 		</tr>
 		<tr>
 			<%= content_tag( 'td', 'From' ) %>
@@ -23,7 +23,7 @@
 		</tr>
 		<tr>
 			<%= content_tag( 'td', 'Note' ) %>
-			<%= content_tag( 'td', party[5] ) %>
+			<%= content_tag( 'td', party[5].text ) %>
 		</tr>
 		<tr>
 			<%= content_tag( 'td', 'Sits opposite side to party' ) %>

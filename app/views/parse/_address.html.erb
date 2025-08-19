@@ -6,59 +6,63 @@
       <td>Email</td>
       <td>
         <% unless address[12].blank? -%>
-          <%= address[12] %>
+          <a href="mailto:<%= address[12].text %>">
+		  	<%= address[12].text %>
+		  </a>
         <% end -%>
       </td>
     </tr>
     <tr>
       <td>Line 1</td>
-      <td><%= address[4] %></td>
+      <td><%= address[4].text %></td>
     </tr>
     <tr>
       <td>Line 2</td>
-      <td><%= address[5] %></td>
+      <td><%= address[5].text %></td>
     </tr>
     <tr>
       <td>Line 3</td>
-      <td><%= address[6] %></td>
+      <td><%= address[6].text %></td>
     </tr>
     <tr>
       <td>Line 4</td>
-      <td><%= address[7] %></td>
+      <td><%= address[7].text %></td>
     </tr>
     <tr>
       <td>Line 5</td>
-      <td><%= address[8] %></td>
+      <td><%= address[8].text %></td>
     </tr>
     <tr>
       <td>Postcode</td>
-      <td><%= address[9] %></td>
+      <td><%= address[9].text %></td>
     </tr>
     <tr>
       <td>Phone</td>
       <td>
         <% unless address[10].blank? %>
-          <%= address[10] %>
+          <a href="tel:<%= address[10].text.gsub( ' ', '' ) %>">
+          	<%= address[10].text %>
+		</a>
         <% end -%>
       </td>
     </tr>
     <tr>
       <td>Fax</td>
-      <td><%= address[11] %></td>
+      <td><%= address[11].text %></td>
     </tr>
     <tr>
       <td>Is preferred?</td>
-      <td><%= address[1] %></td>
+      <td><%= address[1].text %></td>
     </tr>
     <tr>
       <td>Is physical?</td>
-      <td><%= address[2] %></td>
+      <td><%= address[2].text %></td>
     </tr>
   </tbody>
   <tfoot>
     <tr>
       <td>Note</td>
-      <td><%= address[3] %></td>
+      <td><%= address[3].text %></td>
     </tr>
   </tfoot>
 </table>

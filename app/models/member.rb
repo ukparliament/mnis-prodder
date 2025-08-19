@@ -87,11 +87,11 @@ def membership_status_reason?
 end
 
 def constituency?
-  constituency ? constituency : "<!-- no constituency -->".html_safe
+  constituency ? constituency.text : "<!-- no constituency -->".html_safe
 end
 
 def lords_membership_type?
-  lords_membership_type ? lords_membership_type : "<!-- no lords_membership_type -->".html_safe
+  lords_membership_type ? lords_membership_type.text : "<!-- no lords_membership_type -->".html_safe
 end
 
 def members_api
