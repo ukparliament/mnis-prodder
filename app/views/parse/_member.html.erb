@@ -97,26 +97,26 @@
 	  <% if member.given_surname -%>
 	  	<tr>
 	        <td>Given forename</td>
-	        <td><%= member.given_forename %></td>
+	        <td><%= member.given_forename.text %></td>
 	    </tr>
 	  	<tr>
 	        <td>Given middle names</td>
-	        <td><%= member.given_middle_names %></td>
+	        <td><%= member.given_middle_names.text %></td>
 	    </tr>
 	  	<tr>
 	        <td>Given surname</td>
-	        <td><%= member.given_surname %></td>
+	        <td><%= member.given_surname.text %></td>
 	    </tr>
 
       	<% end -%>
 
 	  	<tr>
 	        <td>Town of birth</td>
-	        <td><%= member.town_of_birth %></td>
+	        <td><%= member.town_of_birth.text %></td>
 	    </tr>
 	  	<tr>
 	        <td>Country of birth</td>
-	        <td><%= member.country_of_birth %></td>
+	        <td><%= member.country_of_birth.text %></td>
 	    </tr>
  <% if member.date_of_peerage_announcement -%>
 	  	<tr>
