@@ -25,7 +25,7 @@ gem "rollbar"
 gem "propshaft"
 
 # Library design gem
-gem "library_design", github: "ukparliament/design-assets", glob: 'library_design/*.gemspec', tag: "0.3.1"
+gem "library_design", github: "ukparliament/design-assets", glob: 'library_design/*.gemspec', tag: "0.3.11"
 
 # Lograge
 gem "lograge"
