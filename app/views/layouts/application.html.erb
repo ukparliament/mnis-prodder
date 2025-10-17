@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en-GB">
-	<head>
-		<%= render :partial => 'library_design/head/head' %>
-		<%= tag( 'base', :href => 'https://api.parliament.uk/mnis-prodder' )if Rails.env.production? %>
-	</head>
-	<body class="section-<%= @section %> brand-bicameral">
-	  	<%= render 'layouts/header/header' %>
-		<main class="container block block-page" id="main-content">
-			<div class="inner-content container">
-				<div class="reading-width">
-					<%= content_tag( 'h1', @page_title || $SITE_TITLE ) %>
-	      			<%= yield %>
-				</div>
-	  		</div>
-	    </main>
-		<%= render 'library_design/footer' %>
-	</body>
+  <head>
+    <%= render :partial => 'library_design/head/head' %>
+    <%= tag( 'base', :href => 'https://api.parliament.uk/mnis-prodder' )if Rails.env.production? %>
+  </head>
+  <body class="section-<%= @section %> brand-bicameral">
+    <%= render 'layouts/header/header' %>
+    <main class="container block block-page" id="main-content">
+      <div class="inner-content container">
+        <div class="reading-width">
+          <%= content_tag( 'h1', @page_title || $SITE_TITLE ) %>
+              <%= yield %>
+        </div>
+      </div>
+    </main>
+    <%= render 'library_design/footer' %>
+  </body>
 </html>
