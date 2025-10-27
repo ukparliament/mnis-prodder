@@ -1,55 +1,7 @@
 /* This is just for app specific overrides and extras */
 
 /* Main navigation active states */
-body.section-filter nav#header-nav a.nav-filter {
-	border-bottom-color: #fff;
-}
+body.section-filter nav#header-nav a.nav-filter,
 body.section-lookup nav#header-nav a.nav-lookup {
 	border-bottom-color: #fff;
 }
-
-
-/* ======= Suspected common ====== */
-/* Turn off scrollbrar on crumbtrail scrolling */
-.context-nav .breadcrumb:not(.breadcrumb-adaptive) {
-  scrollbar-width: none;
-}
-
-/* Styling for nav in header */
-nav#header-nav {
-	margin-top: 1em;
-}
-nav#header-nav a {
-	border-bottom: 3px #373151 solid;
-	margin-right: 10px;
-}
-nav#header-nav a:hover {
-	border-bottom-color: #fff;
-}
-
-/* Styling for key value pair tables */
-table.key-value td {
-	border: 1px solid #ddd;
-}
-table.key-value td:nth-child(1) {
-	width: 30%;
-}
-table.key-value td:nth-child(2) {
-	width: 70%;
-}
-
-/* Styling for tables */
-table.multibody tbody {
-	border-bottom: 2px solid #bbb;
-}
-table.multibody tbody:last-child {
-	border-bottom-width: 0;
-}
-
-
-
-
-
-
-
-
