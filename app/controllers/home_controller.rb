@@ -12,14 +12,14 @@ class HomeController < ApplicationController
   # ## Method to display the filter form.
   def index
     @page_title = 'Filter results'
-    @description = 'Get a list of Members from MNIS'
+    @description = "Get a list of Members from the Members' Names Information Service."
     @section = 'filter'
   end
   
   ## Method to display the lookup form.
   def lookup
     @page_title = 'Lookup a Member'
-    @description = 'Lookup a Member from MNIS'
+    @description = "Lookup a Member from the Members' Names Information Service."
     @crumb << { label: 'Lookup a Member', url: nil }
     @section = 'lookup'
   end
