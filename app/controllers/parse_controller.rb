@@ -43,6 +43,7 @@ class ParseController < ApplicationController
     
       # ... we know we've looked up a single Member by an identifier.
       @page_title = 'Member'
+      @description = 'A Member.'
       @crumb << { label: 'Lookup a Member', url: home_lookup_url }
       @crumb << { label: 'Member', url: nil }
       @section = 'lookup'
@@ -52,6 +53,7 @@ class ParseController < ApplicationController
     
       # ... we know we've looked up a list of Members.
       @page_title = 'Members'
+      @description = 'Members list.'
       @crumb << { label: 'Members', url: nil }
       @section = 'filter'
     end
