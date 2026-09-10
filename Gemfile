@@ -5,6 +5,7 @@ ruby file: '.tool-versions'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem "rails", "~> 8.1.1"
+gem "json", "~> 2"
 
 # To make CORS configuration easier and handle it in Rack middleware
 gem "rack-cors"
@@ -25,7 +26,7 @@ gem "rollbar"
 gem "propshaft"
 
 # Library design gem
-gem "library_design", github: "ukparliament/design-assets", glob: 'library_design/*.gemspec', tag: "0.6.10"
+gem "library_design", github: "ukparliament/design-assets", glob: 'library_design/*.gemspec', tag: "0.6.14"
 
 # Lograge
 gem "lograge"
