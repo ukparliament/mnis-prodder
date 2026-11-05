@@ -5,7 +5,7 @@ ruby file: '.tool-versions'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem "rails", "~> 8.1.1"
-gem "json", "~> 2"
+gem "json"
 
 # To make CORS configuration easier and handle it in Rack middleware
 gem "rack-cors"
